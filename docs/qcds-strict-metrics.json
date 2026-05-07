@@ -191,7 +191,7 @@
           "description": "docs ZIPが生成済みである",
           "kind": "zip",
           "pass": true,
-          "detail": "github-issue-pr-actions-helper-docs.zip 10175 bytes"
+          "detail": "github-issue-pr-actions-helper-docs.zip exists and exceeds minimum size"
         }
       ]
     },
