@@ -14,7 +14,9 @@
     "manifest-v3",
     "chromeextension",
     "qcds",
-    "pre-release"
+    "pre-release",
+    "strict-qcds",
+    "representative-suite"
   ],
   "license": "MIT"
 }

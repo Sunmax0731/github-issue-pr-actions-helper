@@ -1,0 +1,120 @@
+{
+  "product": "github-issue-pr-actions-helper",
+  "title": "GitHub Issue/PR/Actions補助",
+  "benchmarkRepos": [
+    "Sunmax0731/movie-telop-transcriber",
+    "Sunmax0731/codex-remote-android"
+  ],
+  "requiredFields": [
+    "repository",
+    "issueOrPr",
+    "action",
+    "evidence"
+  ],
+  "scenarios": [
+    {
+      "id": "happy-path",
+      "purpose": "GitHub画面上のIssue、PR、Actions、証跡確認の正常入力を確認する",
+      "input": {
+        "items": [
+          {
+            "id": "github-issue-pr-actions-helper-happy",
+            "title": "GitHub Issue/PR/Actions補助 happy",
+            "repository": "Sunmax0731/github-issue-pr-actions-helper",
+            "issueOrPr": "#1",
+            "action": "review",
+            "evidence": "evidence-sample",
+            "status": "ready"
+          }
+        ]
+      },
+      "expected": {
+        "result": "passed",
+        "errors": 0,
+        "warnings": 0
+      }
+    },
+    {
+      "id": "missing-required",
+      "purpose": "必須項目不足をerrorとして検出する",
+      "input": {
+        "items": [
+          {
+            "id": "github-issue-pr-actions-helper-missing-required",
+            "title": "GitHub Issue/PR/Actions補助 missing-required",
+            "issueOrPr": "#1",
+            "action": "review",
+            "evidence": "evidence-sample",
+            "status": "ready"
+          }
+        ]
+      },
+      "expected": {
+        "result": "failed",
+        "errors": 1,
+        "warnings": 0
+      }
+    },
+    {
+      "id": "blocked-status",
+      "purpose": "blocked状態をwarningとして検出する",
+      "input": {
+        "items": [
+          {
+            "id": "github-issue-pr-actions-helper-blocked",
+            "title": "GitHub Issue/PR/Actions補助 blocked",
+            "repository": "Sunmax0731/github-issue-pr-actions-helper",
+            "issueOrPr": "#1",
+            "action": "review",
+            "evidence": "evidence-sample",
+            "status": "blocked"
+          }
+        ]
+      },
+      "expected": {
+        "result": "warning",
+        "errors": 0,
+        "warnings": 1
+      }
+    },
+    {
+      "id": "mixed-batch",
+      "purpose": "正常、必須不足、警告を同一バッチで集計する",
+      "input": {
+        "items": [
+          {
+            "id": "github-issue-pr-actions-helper-happy",
+            "title": "GitHub Issue/PR/Actions補助 happy",
+            "repository": "Sunmax0731/github-issue-pr-actions-helper",
+            "issueOrPr": "#1",
+            "action": "review",
+            "evidence": "evidence-sample",
+            "status": "ready"
+          },
+          {
+            "id": "github-issue-pr-actions-helper-missing-required",
+            "title": "GitHub Issue/PR/Actions補助 missing-required",
+            "issueOrPr": "#1",
+            "action": "review",
+            "evidence": "evidence-sample",
+            "status": "ready"
+          },
+          {
+            "id": "github-issue-pr-actions-helper-blocked",
+            "title": "GitHub Issue/PR/Actions補助 blocked",
+            "repository": "Sunmax0731/github-issue-pr-actions-helper",
+            "issueOrPr": "#1",
+            "action": "review",
+            "evidence": "evidence-sample",
+            "status": "blocked"
+          }
+        ]
+      },
+      "expected": {
+        "result": "failed",
+        "errors": 1,
+        "warnings": 1
+      }
+    }
+  ]
+}
