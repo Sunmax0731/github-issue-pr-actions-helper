@@ -1,0 +1,17 @@
+{
+  "name": "github-issue-pr-actions-helper",
+  "version": "0.1.0",
+  "private": false,
+  "type": "module",
+  "description": "GitHub Issue、PR、Actions確認をブラウザ補助UIで整理する。",
+  "scripts": {
+    "test": "node --test tests/*.test.mjs",
+    "validate": "npm test"
+  },
+  "keywords": [
+    "chrome-extension",
+    "github-helper",
+    "manifest-v3"
+  ],
+  "license": "MIT"
+}
