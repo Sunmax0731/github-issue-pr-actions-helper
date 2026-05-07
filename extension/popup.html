@@ -4,18 +4,27 @@
   <meta charset="utf-8">
   <title>GitHub Issue・PR・Actions補助</title>
   <style>
-    body { width: 360px; margin: 0; font-family: system-ui, sans-serif; color: #172026; background: #f7f8f8; }
+    body { width: 390px; margin: 0; font-family: system-ui, sans-serif; color: #162022; background: #f5f7f7; }
     main { padding: 12px; display: grid; gap: 10px; }
-    textarea { min-height: 160px; font: 12px ui-monospace, monospace; }
-    button { padding: 8px 10px; border: 1px solid #355; background: #123c40; color: white; cursor: pointer; }
+    header { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+    strong { font-size: 14px; }
+    .badge { padding: 4px 8px; border: 1px solid #8ab5a4; background: #e7f2ed; color: #153b31; font-size: 12px; }
+    .cards { display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px; }
+    .card { background: white; border: 1px solid #d8dfdf; padding: 8px; min-height: 42px; }
+    .card span { display: block; color: #667; font-size: 11px; }
+    .card b { display: block; margin-top: 3px; font-size: 15px; }
+    textarea { min-height: 130px; font: 12px ui-monospace, monospace; border: 1px solid #c8d0d0; resize: vertical; }
+    .toolbar { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+    button { padding: 8px 10px; border: 1px solid #31595b; background: #123c40; color: white; cursor: pointer; }
     pre { white-space: pre-wrap; background: white; border: 1px solid #d7dddd; padding: 8px; max-height: 220px; overflow: auto; }
   </style>
 </head>
 <body>
 <main>
-  <strong>GitHub Issue・PR・Actions補助</strong>
-  <textarea id="input"></textarea>
-  <button id="analyze">Analyze</button>
+  <header><strong>GitHub Issue・PR・Actions補助</strong><span id="badge" class="badge">未検査</span></header>
+  <div id="cards" class="cards"></div>
+  <textarea id="input" aria-label="検査JSON"></textarea>
+  <div class="toolbar"><button id="analyze">Analyze</button><button id="sample">Sample</button></div>
   <pre id="result"></pre>
 </main>
 <script type="module" src="popup.js"></script>

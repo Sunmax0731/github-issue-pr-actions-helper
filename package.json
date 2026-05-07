@@ -5,7 +5,7 @@
   "type": "module",
   "description": "GitHub Issue、PR、Actions確認をブラウザ補助UIで整理する。",
   "scripts": {
-    "test": "node --test tests/*.test.mjs",
+    "test": "node --test tests/*.test.mjs && node tools/qcds-evaluate.mjs",
     "validate": "npm test"
   },
   "keywords": [

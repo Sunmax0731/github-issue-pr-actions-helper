@@ -1,19 +1,21 @@
 {
   "items": [
     {
-      "id": "github-helper-1",
+      "id": "github-issue-pr-actions-helper-1",
       "title": "GitHub Issue・PR・Actions補助 サンプル 1",
+      "status": "ready",
       "repository": "Sunmax0731/github-issue-pr-actions-helper",
       "issueOrPr": "#1",
       "action": "review",
-      "evidence": "docs/manual-test.md"
+      "evidence": "evidence-sample"
     },
     {
-      "id": "github-helper-missing-required",
+      "id": "github-issue-pr-actions-helper-missing-required",
       "title": "必須項目不足サンプル",
+      "status": "ready",
       "issueOrPr": "#1",
       "action": "review",
-      "evidence": "docs/manual-test.md"
+      "evidence": "evidence-sample"
     }
   ]
 }
