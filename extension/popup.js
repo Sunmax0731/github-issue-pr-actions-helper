@@ -4,7 +4,7 @@ const sample = {
   "items": [
     {
       "id": "github-issue-pr-actions-helper-1",
-      "title": "GitHub Issue・PR・Actions補助 サンプル 1",
+      "title": "GitHub Issue/PR/Actions補助 サンプル1",
       "status": "ready",
       "repository": "Sunmax0731/github-issue-pr-actions-helper",
       "issueOrPr": "#1",
@@ -44,7 +44,7 @@ document.getElementById('analyze').addEventListener('click', async () => {
     result.textContent = renderMarkdownReport(report);
     await chrome.storage.local.set({ lastReport: report });
     const [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
-    if (tab?.id) await chrome.tabs.sendMessage(tab.id, { type: 'TOP19_REPORT', report }).catch(() => undefined);
+    if (tab?.id) await chrome.tabs.sendMessage(tab.id, { type: 'TOP19_REPORT', title: 'GitHub Issue/PR/Actions補助', report }).catch(() => undefined);
   } catch (error) {
     badge.textContent = '入力エラー';
     result.textContent = String(error?.message || error);

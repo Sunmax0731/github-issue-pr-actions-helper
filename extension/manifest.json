@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
-  "name": "GitHub Issue・PR・Actions補助",
+  "name": "GitHub Issue/PR/Actions補助",
   "version": "0.1.0",
-  "description": "GitHub Issue、PR、Actions確認をブラウザ補助UIで整理する。",
+  "description": "GitHub画面上でIssue、PR、Actionsの確認作業と証跡を補助する。",
   "permissions": [
     "storage",
     "activeTab",

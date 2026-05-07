@@ -2,7 +2,7 @@
   "items": [
     {
       "id": "github-issue-pr-actions-helper-1",
-      "title": "GitHub Issue・PR・Actions補助 サンプル 1",
+      "title": "GitHub Issue/PR/Actions補助 サンプル1",
       "status": "ready",
       "repository": "Sunmax0731/github-issue-pr-actions-helper",
       "issueOrPr": "#1",

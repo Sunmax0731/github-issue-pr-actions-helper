@@ -4,12 +4,13 @@ import { analyzeItems, renderMarkdownReport } from '../extension/src/core.mjs';
 
 test('valid sample passes required field checks', () => {
   const report = analyzeItems({ items: [{
-  "id": "github-helper-1",
-  "title": "GitHub Issue・PR・Actions補助 サンプル 1",
+  "id": "github-issue-pr-actions-helper-1",
+  "title": "GitHub Issue/PR/Actions補助 サンプル1",
+  "status": "ready",
   "repository": "Sunmax0731/github-issue-pr-actions-helper",
   "issueOrPr": "#1",
   "action": "review",
-  "evidence": "docs/manual-test.md"
+  "evidence": "evidence-sample"
 }] });
   assert.equal(report.summary.result, 'passed');
   assert.equal(report.summary.errors, 0);
@@ -17,11 +18,12 @@ test('valid sample passes required field checks', () => {
 
 test('missing required field is reported', () => {
   const report = analyzeItems({ items: [{
-  "id": "github-helper-missing-required",
+  "id": "github-issue-pr-actions-helper-missing-required",
   "title": "必須項目不足サンプル",
+  "status": "ready",
   "issueOrPr": "#1",
   "action": "review",
-  "evidence": "docs/manual-test.md"
+  "evidence": "evidence-sample"
 }] });
   assert.equal(report.summary.result, 'failed');
   assert.equal(report.summary.errors, 1);

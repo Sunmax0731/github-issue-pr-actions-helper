@@ -2,22 +2,22 @@
 
 ## 準備
 
-- Google Chrome を起動する。
-- 拡張機能フォルダ: `D:\AI\ChromeExtension\github-issue-pr-actions-helper\extension`
-- ローカルサーバーは不要。
+- リポジトリ: `D:\AI\ChromeExtension\github-issue-pr-actions-helper`
+- `npm test` が成功していること
+- 読み込み対象: `D:\AI\ChromeExtension\github-issue-pr-actions-helper\extension`
+- Chromeの拡張機能画面でデベロッパーモードを有効にします
+- ローカルサーバーは不要です
 
 ## 手順
 
-1. PowerShellで `cd D:\AI\ChromeExtension\github-issue-pr-actions-helper` を実行する。
-2. `npm test` が成功することを確認する。
-3. Chromeで `chrome://extensions` を開く。
-4. Developer mode を有効にし、`Load unpacked` で `D:\AI\ChromeExtension\github-issue-pr-actions-helper\extension` を選ぶ。
-5. 任意のWebページを開き、拡張アイコンをクリックする。
-6. サンプルJSONを貼り付け、Analyze を押す。
-7. 結果が表示され、必須項目不足を含む入力では error が出ることを確認する。
+1. Chromeで `chrome://extensions` を開く
+2. デベロッパーモードを有効にして `extension` フォルダを読み込む
+3. 拡張機能のポップアップを開く
+4. `Sample`、`Analyze` の順に押す
+5. ページ右下の補助パネルまたはポップアップに結果が表示されることを確認する
 
 ## 期待結果
 
-- 拡張が読み込める。
-- Popup上で検証結果が表示される。
-- ページ注釈または補助情報が対象ページに表示される。
+- 必須項目不足が分かる形で表示される。
+- 次アクションがユーザーに理解できる。
+- 実行ログ、出力ファイル、または画面表示をリリース前確認に使える。
