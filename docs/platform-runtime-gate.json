@@ -1,0 +1,11 @@
+{
+  "product": "github-issue-pr-actions-helper",
+  "title": "GitHub Issue・PR・Actions補助",
+  "domain": "ChromeExtension",
+  "ideaNo": 5,
+  "platformType": "chrome-extension",
+  "expectedPublicTarget": "Chrome Web Store",
+  "browser": null,
+  "android": null,
+  "evidence": "dist/platform-runtime-gate-result.json"
+}
