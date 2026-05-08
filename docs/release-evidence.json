@@ -2,31 +2,60 @@
   "product": "github-issue-pr-actions-helper",
   "repository": "Sunmax0731/github-issue-pr-actions-helper",
   "githubUrl": "https://github.com/Sunmax0731/github-issue-pr-actions-helper",
-  "tag": "v0.1.0-alpha.1",
   "releaseUrl": "https://github.com/Sunmax0731/github-issue-pr-actions-helper/releases/tag/v0.1.0-alpha.1",
+  "tag": "v0.1.0-alpha.1",
   "prerelease": true,
   "latest": false,
+  "latestCheck": {
+    "endpoint": "not-found-or-no-stable-release",
+    "latestTag": null,
+    "latestIsThisPrerelease": false
+  },
   "assetCount": 3,
-  "assets": [
-    "github-issue-pr-actions-helper-docs.zip",
-    "manual-test.md",
-    "strict-manual-test-addendum.md"
-  ],
-  "platformRuntimeGate": "dist/platform-runtime-gate-result.json",
-  "platformType": "chrome-extension",
-  "manualTest": "not-run-by-codex",
+  "assets": {
+    "required": [
+      "dist/github-issue-pr-actions-helper-docs.zip",
+      "docs/manual-test.md",
+      "docs/strict-manual-test-addendum.md"
+    ],
+    "actualNames": [
+      "github-issue-pr-actions-helper-docs.zip",
+      "manual-test.md",
+      "strict-manual-test-addendum.md"
+    ],
+    "actualCount": 3,
+    "allRequiredPresent": true
+  },
   "qcdsEvaluation": {
     "Quality": "S-",
     "Cost": "S-",
     "Delivery": "S-",
-    "Satisfaction": "S-",
-    "capReason": "manual-test-not-run-by-codex"
+    "Satisfaction": "S-"
   },
-  "github": {
-    "repo": "Sunmax0731/github-issue-pr-actions-helper",
-    "url": "https://github.com/Sunmax0731/github-issue-pr-actions-helper",
-    "releaseUrl": "https://github.com/Sunmax0731/github-issue-pr-actions-helper/releases/tag/v0.1.0-alpha.1",
-    "prerelease": true,
-    "latest": false
+  "platformRuntimeGate": {
+    "product": "github-issue-pr-actions-helper",
+    "platformType": "chrome-extension",
+    "pass": true,
+    "method": "runtime-gate",
+    "manualTest": "not-run-by-codex",
+    "manifest": "extension/manifest.json",
+    "manifestVersion": 3
+  },
+  "automatedTests": [
+    {
+      "command": "npm test",
+      "result": "passed"
+    }
+  ],
+  "manualTest": "not-run-by-codex",
+  "git": {
+    "ahead": 0,
+    "behind": 0,
+    "status": "",
+    "localCodex": [
+      "codex/closed-alpha-release"
+    ],
+    "remoteCodex": [],
+    "clean": false
   }
 }
